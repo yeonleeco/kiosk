@@ -19,7 +19,7 @@ class App extends React.Component {
 
     this.state = {
       step: 1
-    };
+    }; 
   }
 
   nextStep() {
