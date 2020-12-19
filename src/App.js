@@ -19,7 +19,7 @@ class App extends React.Component {
 
     this.state = {
       step: 1
-    }; 
+    };
   }
 
   nextStep() {
@@ -37,7 +37,7 @@ class App extends React.Component {
 
     if (step == 1) {
       return (
-        <FirstPage />
+        <FirstPage onClick={this.nextStep} />
       )
     } else if (step == 2) {
       return (

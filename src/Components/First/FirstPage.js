@@ -1,14 +1,19 @@
 import React from 'react'
 import { Container, Grid, Paper, Box, Button, borders } from '@material-ui/core';
-import OrderButton from '../OrderButton';
-import BigTitle from '../BigTitle';
-import Image from '../Image';
-import NewMenu from '../NewMenu';
+import OrderButton from '../OrderButton.js';
+import BigTitle from '../BigTitle.js';
+import Image from '../Image.js';
+import NewMenu from '../NewMenu.js';
 
 
 class FirstPage extends React.Component {
   constructor(props) {
     super(props);
+    this.onClick = this.onClick.bind(this);
+  }
+
+  onClick() {
+    this.props.onClick();
   }
 
   render() {
@@ -28,7 +33,7 @@ class FirstPage extends React.Component {
              direction="row"
              justify="center"
              alignItems="flex-end">
-             <Grid item><OrderButton onClick={this.nextStep} button="Dine In"></OrderButton></Grid>
+             <Grid item><OrderButton onClick={this.onClick} button="Dine In"></OrderButton></Grid>
              <Grid item><OrderButton button="Pick Up"></OrderButton></Grid>
            </Grid>
        </Box>

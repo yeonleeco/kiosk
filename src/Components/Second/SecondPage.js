@@ -13,8 +13,6 @@ class SecondPage extends React.Component {
     this.props.onClick();
   }
 
-
-
   render() {
     return (
      <div>
